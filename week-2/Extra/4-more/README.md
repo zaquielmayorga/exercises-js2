@@ -12,4 +12,3 @@ https://www.khanacademy.org/computing/computer-programming/html-css-js
 # Readings
 
 - [Eloquent JavaScript - JavaScript and the Browser](https://eloquentjavascript.net/13_browser.html)
-
