@@ -14,7 +14,20 @@
  * </div>
  */
 function exerciseOne(arrayOfPeople) {
-  let content = document.querySelector("#content");
+  var content = document.getElementById("content");
+
+  var peopleNames = arrayOfPeople.map(person => person.name)
+  var peopleJobs =  arrayOfPeople.map(person => person.job)
+
+  var h1 = document.createElement("h1");
+  var h2 = document.createElement("h2");
+
+content.appendChild(h1)
+content.appendChild(h2)
+
+h1.innerHTML += peopleNames
+h2.innerHTML += peopleJobs
+
 }
 
 /**
@@ -26,6 +39,16 @@ function exerciseOne(arrayOfPeople) {
  */
 function exerciseTwo(shopping) {
   //Write your code in here
+  const content = document.getElementById("content")
+  const ul = document.createElement("ul")
+  content.appendChild(ul)
+  shopping.forEach(item => {
+    const listItem = document.createElement("li")
+    listItem.innerText = item
+    ul.appendChild(listItem)
+
+  })
+   
 }
 
 /**
@@ -57,8 +80,30 @@ function exerciseTwo(shopping) {
 
     The end result should look something like this: https://hyf-js2-week1-makeme-ex1-demo.herokuapp.com/
 **/
+const bookCovers = [
+  'https://assets.wired.com/photos/w_1001/wp-content/uploads/2015/09/design-of-everyday-things.jpg',
+  'http://www.kurzweilai.net/images/The-Most-Human-Human-Paperback-Front-Cover.jpg',
+  'https://upload.wikimedia.org/wikipedia/en/8/8f/The_pragmatic_programmer.jpg'
+]
 function exerciseThree(books) {
   //Write your code in here
+  const content = document.getElementById ("content")
+  const list = document.createElement("ul")
+  content.appendChild(list)
+  books.forEach(
+  (book, i)=> {
+    const li = document.createElement("li")
+    const p = document.createElement("p")
+    const img = appendChild("img")
+    li.appendChild(p)
+    li.appendChild(img)
+    list.appendChild(li)
+p.innerText = "${book.title} - ${book.autor}"
+    img.src = bookCovers[i]
+    img.width = 100
+    li.style.backgroundColor = book.alreadyRead ? "green" : "read"
+}
+  )
 }
 
 //
@@ -77,7 +122,7 @@ let people = [
   { name: "Boris", job: "Prime Minister" }
 ];
 
-exerciseOne(people);
+// console.log(exerciseOne(people));
 
 let shopping = ["Milk", "Break", "Eggs", "A Dinosaur", "Cake", "Sugar", "Tea"];
 

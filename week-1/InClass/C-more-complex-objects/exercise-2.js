@@ -17,17 +17,13 @@ let newCurrentOwner = {
   firstName: "Georgina",
   lastName: "Hernandez",
 };
-
-/*
-  DO NOT EDIT ANYTHING ABOVE THIS LINE
-
-  WRITE YOUR CODE BELOW
-*/
-
 // - assign the value of the variable 'newCurrentOwner' as the value to the house's "currentOwner"
+house.currentOwner = newCurrentOwner
 // - from the list of previous owners, replace only "John A." with "Stephen B."
+// house.previousOwners = ["Claire M.", "Stephen B."] NO ES LO QUE SE PIDE
+house.previousOwners[1] = "Stephen B."
 // - give the house a new property called 'isForSale' with the value 'false'
-
+house.isForSale = false
 /*
   DO NOT EDIT ANYTHING BELOW THIS LINE
 */
