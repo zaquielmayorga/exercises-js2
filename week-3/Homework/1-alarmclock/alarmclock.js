@@ -1,5 +1,17 @@
 function setAlarm() {}
+let alarmValue = parseInt(document.getElementById('alarmaSet').value)
+changeOutputText(alarmValue)
 
+function changeOutputText(time){
+  const outputText = document.getElementById('timeRemaining')
+  outputText.innerText ='Time  Remaining: 00:' + (time < 10 ? `0${time}` : time)
+
+  if (time > 0) {
+  setTimeout(() => changeOutputText(--time), 1000)
+}else {
+  playAlarm();
+  } 
+}
 // DO NOT EDIT BELOW HERE
 
 var audio = new Audio("alarmsound.mp3");

@@ -22,7 +22,7 @@ const zeroFuel = (distanceToPump, mpg, fuelLeft) => {
       }
   }
   return result
-
+----------------------------------------------------
   var sumation = function(num){
       let sum = 0;
       for (x = 0; x <= num; x++){
@@ -30,7 +30,7 @@ const zeroFuel = (distanceToPump, mpg, fuelLeft) => {
       }
       return
   }
-
+--------------------------------------------------------
 
   funtion differenceInAges(ages){
       ages sort(
@@ -45,7 +45,7 @@ const zeroFuel = (distanceToPump, mpg, fuelLeft) => {
       result.push(ages[ages.length-1]-ages[0]);
       return result
   }
-
+-------------------------------------------------------------
 
   function gooseFilter (birds) {
   var geese = ["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"];
@@ -59,3 +59,4 @@ const zeroFuel = (distanceToPump, mpg, fuelLeft) => {
   
 
 };
+--------------------------------------
